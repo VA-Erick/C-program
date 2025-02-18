@@ -3,7 +3,6 @@ print the sum of its digits.
 [Hint: Use the modulus operator ‘%’]
 
 
-A.
 
 
 
@@ -823,6 +822,61 @@ int main()
     }
     return 0;
 }
+
+
+
+
+Q.x and n are input through keyboard. Write a program to compute x^n, n! ,nCr ,nPr.
+
+
+#include <stdio.h>
+
+int main()
+{
+    int x, n, fact = 1, nCr, nPr, power = 1, r;
+
+    printf("Enter x and n: ");
+    scanf("%d %d", &x, &n);
+
+    for (int i = 0; i < n; i++)
+    {
+        power =power* x;
+    }
+    printf("x^n = %d\n", power);
+
+    for (int i = 2; i <= n; i++)
+    {
+        fact = fact*i;
+    }
+    printf("n! = %d\n", fact);
+
+    printf("Enter n and r for combinations and permutations: ");
+    scanf("%d %d", &n, &r);
+
+    int fact_n = 1, fact_r = 1, fact_nr = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact_n = fact_n*i;
+    }
+    for (int i = 1; i <= r; i++)
+    {
+        fact_r = fact_r*i;
+    }
+    for (int i = 1; i <= (n - r); i++)
+    {
+        fact_nr = fact_nr *i;
+    }
+
+    nCr = fact_n / (fact_r * fact_nr);
+    nPr = fact_n / fact_nr;
+
+    printf("nCr = %d\n", nCr);
+    printf("nPr = %d\n", nPr);
+
+    return 0;
+}
+
+
 
 
 
