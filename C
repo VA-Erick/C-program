@@ -118,8 +118,13 @@ int main()
 
 
 
+
+
+
 Q.If a 4 digit number is input through the keyboard, write a program to obtain the sum
 of the first and last digit of this number.
+
+
 
 
 
@@ -149,6 +154,8 @@ int main()
 
 
 
+
+
 Q.Take a year as input and determine whether it is a leap year.
 [Hint: Check the divisibility by 4, 100 and 400]
 
@@ -170,6 +177,10 @@ int main() {
 
     return 0;
 }
+
+
+
+
 
 
 
@@ -875,6 +886,8 @@ int main()
 
     return 0;
 }
+
+
 
 
 
