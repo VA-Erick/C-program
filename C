@@ -1,1 +1,835 @@
+Q.If a 5 digit number is input through the keyboard, write a program to calculate and
+print the sum of its digits.
+[Hint: Use the modulus operator ‘%’]
+
+
+A.
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,sum=0,digit;
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    for(; n!=0;)
+    {
+        digit = n%10;
+        sum += digit;
+        n/=10;
+    }
+    printf("%d",sum);
+
+
+
+}
+
+
+
+Q.5. WAP that takes a year as input and determines whether it is:
+● A leap year (divisible by 4 and not by 100, or divisible by 400).
+● If it’s not a leap year, print whether it's even or odd.
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+    {
+        printf("%d is a Leap Year.\n", year);
+    }
+    else
+    {
+        printf("%d is not a Leap Year.\n", year);
+
+       
+        if (year % 2 == 0)
+        {
+            printf("It is an Even Year.\n");
+        }
+        else
+        {
+            printf("It is an Odd Year.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q. If a 5 digit number is input through the keyboard, write a program to reverse the
+number.
+A.
+
+
+#include <stdio.h>
+
+int main()
+{
+    int number, reversed = 0, remainder;
+
+
+    printf("Enter a 5-digit number: ");
+    scanf("%d", &number);
+
+
+
+
+
+    for ( ; number!=0; )
+    {
+        remainder = number % 10;
+        reversed = reversed * 10 + remainder;
+        number = number / 10;
+    }
+
+
+    printf("Reversed number: %d\n", reversed);
+
+    return 0;
+}
+
+
+
+Q.If a 4 digit number is input through the keyboard, write a program to obtain the sum
+of the first and last digit of this number.
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int number, first_number, last_number, sum;
+
+
+    printf("Enter a 4 digit number:\n");
+    scanf("%d",&number);
+
+
+    first_number = number%10;
+
+    last_number = number/1000;
+
+    sum = first_number + last_number;
+
+
+    printf("Total %d",sum);
+
+    return 0;
+}
+
+
+
+Q.Take a year as input and determine whether it is a leap year.
+[Hint: Check the divisibility by 4, 100 and 400]
+
+A.#include <stdio.h>
+
+int main() {
+    int year;
+
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("%d is a leap year.\n", year);
+    } else {
+        printf("%d is not a leap year.\n", year);
+    }
+
+    return 0;
+}
+
+
+
+Q.If cost price and selling price of an item is input through the keyboard, write a
+program to determine whether the seller has made profit or incurred loss. Also
+determine how much profit he made or loss he incurred.
+
+
+A.
+
+
+#include <stdio.h>
+
+int main() {
+    int buy,sell,profit,loss;
+
+    printf("Enter the buying amount:\n");
+    scanf("%d",&buy);
+
+    printf("Enter the selling amount:\n");
+    scanf("%d",&sell);
+
+
+    if (buy<sell)
+    {
+        profit = sell - buy;
+        printf("The  Profit is : %d",profit);
+    }
+    else
+    {
+        loss = buy - sell;
+        printf("The loss is : %d",loss);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+Q.1. WAP to Check if a given integer is odd or even.
+● If it's even, check if it is positive, negative, or zero.
+● If it's odd, check if it is greater than 10 or less than or equal to 10.
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Enter a Number\n");
+    scanf("%d",&num);
+
+    if(num%2==0)
+    {
+        {
+            printf("It is a even number\n");
+        }
+        if(0<num)
+        {
+            printf("It is positive\n");
+        }
+        else if(0>num)
+        {
+            printf("It is negative\n");
+        }
+        else
+        {
+            printf("It is zero");
+        }
+    }
+    else if ( num%2!=0)
+    {
+        {
+            printf("It is a odd number\n");
+        }
+        if (num > 10)
+        {
+            printf("It is greater than 10\n");
+        }
+        else if (num <=10)
+        {
+            printf("It is less than equal to 10\n");
+        }
+    }
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+Q.2. WAP that takes a student’s score (0-100) and determines the grade:
+● If the score is less than 40, it's "Fail."
+● If it's between 40 and 59, it's "Pass."
+● If it's between 60 and 79, it's "Good."
+● If it's 80 or above, it's "Excellent."
+● Additionally, check if the student has an attendance percentage greater than 75%. If not,
+output "Disqualified" regardless of the score.
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int score;
+    float attendance;
+
+
+    printf("Enter the student's score (0-100): ");
+    scanf("%d", &score);
+
+    printf("Enter the student's attendance percentage: ");
+    scanf("%f", &attendance);
+
+
+    if (attendance <= 75.0)
+    {
+        printf("Disqualified due to low attendance.\n");
+    }
+    else
+    {
+
+        if (score < 40)
+        {
+            printf("Grade: Fail\n");
+        }
+        else if (score >= 40 && score <= 59)
+        {
+            printf("Grade: Pass\n");
+        }
+        else if (score >= 60 && score <= 79)
+        {
+            printf("Grade: Good\n");
+        }
+        else if (score >= 80 && score <= 100)
+        {
+            printf("Grade: Excellent\n");
+        }
+        else
+        {
+            printf("Invalid score entered.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+3. Take three integers as input for the sides of a triangle and determine the type of triangle:
+● If all sides are equal, it's an Equilateral triangle.
+● If two sides are equal, it's an Isosceles triangle.
+● If no sides are equal, it's a Scalene triangle. Additionally, check if the sides form a valid
+triangle (sum of any two sides must be greater than the third side).
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+
+
+    printf("Enter the three sides of the triangle: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+
+    if (a + b > c && a + c > b && b + c > a)
+    {
+
+        if (a == b && b == c)
+        {
+            printf("The triangle is Equilateral.\n");
+        }
+        else if (a == b || b == c || a == c)
+        {
+            printf("The triangle is Isosceles.\n");
+        }
+        else
+        {
+            printf("The triangle is Scalene.\n");
+        }
+    }
+    else
+    {
+        printf("The given sides do not form a valid triangle.\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q.4. WAP that simulates an ATM
+● Take the balance and withdrawal amount as input.
+● If the withdrawal amount is greater than the balance, print "Insufficient Balance."
+● If the withdrawal amount is a multiple of 100, deduct it from the balance and print the
+remaining balance. Otherwise, print "Invalid Denomination."
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float balance;
+    int withdrawal;
+
+    printf("Enter your account balance: ");
+    scanf("%f", &balance);
+
+    printf("Enter the amount to withdraw: ");
+    scanf("%d", &withdrawal);
+
+    if (withdrawal > balance)
+    {
+        printf("Insufficient Balance.\n");
+    }
+
+    else if (withdrawal % 100 != 0)
+    {
+        printf("Invalid Denomination. Please enter multiples of 100.\n");
+    }
+
+    else
+    {
+        balance = balance-withdrawal;
+        printf("Withdrawal successful.\n");
+        printf("Remaining Balance: %.2f\n", balance);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+Q.1. WAP that takes an integer (1-7) as input and prints the corresponding day of the week:
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number between 1-7 \n");
+    scanf("%d",&n);
+
+
+
+    switch(n)
+    {
+
+    case 1:
+        printf("Sunday");
+        break;
+    case 2:
+        printf("Monday");
+        break;
+
+    case 3:
+        printf("Tueday");
+        break;
+
+    case 4:
+        printf("Wednessay");
+        break;
+    case 5:
+        printf("Thursday");
+        break;
+    case 6:
+        printf("Friday");
+        break;
+    case 7:
+        printf("Saturday");
+        break;
+    default:
+        printf("Invalid");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+Q.2. Write a basic calculator program using switch that takes two integers and an operator as
+input. The program should: Perform addition, subtraction, multiplication, or division based on the
+operator. Handle invalid operators.
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    char ch;
+    float num1,num2,result;
+    printf("Enter a input OPARETOR '+', '-' , '/' ,'*' \n");
+    scanf("%c",&ch);
+    printf("Enter a input number\n");
+    scanf("%f",&num1);
+    printf("Enter a input number\n");
+    scanf("%f",&num2);
+
+
+
+    switch(ch)
+    {
+
+    case '+':
+        result=num1+num2;
+        printf("result : %.2f",result);
+        break;
+    case '-':
+        result=num1-num2;
+        printf("result : %.2f",result);
+        break;
+
+    case '/':
+        result=num1/num2;
+        printf("result : %.2f",result);
+        break;
+    case '*':
+        result=num1*num2;
+        printf("result : %.2f",result);
+        break;
+
+
+    default:
+        printf("Invalid");
+    }
+    return 0;
+}
+
+
+
+
+
+Q.3. Write a program that takes an integer representing a month (1 for January, 2 for February, ...,
+12 for December) and determines the season:
+● Winter: December (12), January (1), February (2)
+● Spring: March (3), April (4), May (5)
+● Summer: June (6), July (7), August (8)
+● Fall: September (9), October (10), November (11)
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int month;
+
+    printf("Enter a number (1-12) representing the month: ");
+    scanf("%d", &month);
+
+    switch (month)
+    {
+    case 12:
+    case 1:
+    case 2:
+        printf("Season: Winter\n");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        printf("Season: Spring\n");
+        break;
+    case 6:
+    case 7:
+    case 8:
+        printf("Season: Summer\n");
+        break;
+    case 9:
+    case 10:
+    case 11:
+        printf("Season: Fall\n");
+        break;
+    default:
+        printf("Invalid input. Please enter a number between 1 and 12.\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q.5. Write a program that takes an input representing an item number and prints the price:
+● Item 1: $10
+● Item 2: $20
+● Item 3: $30
+● Item 4: $40
+● For any other input, print "Invalid Item Number."
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int item;
+
+
+    printf("Enter the item number (1-4): ");
+    scanf("%d", &item);
+
+
+    switch (item)
+    {
+    case 1:
+        printf("Price: $10\n");
+        break;
+    case 2:
+        printf("Price: $20\n");
+        break;
+    case 3:
+        printf("Price: $30\n");
+        break;
+    case 4:
+        printf("Price: $40\n");
+        break;
+    default:
+        printf("Invalid Item Number.\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+Q.Calculate sum of the first n natural numbers.
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int i,n,sum=0;
+    printf("Input n:");
+    scanf("%d",&n);
+    for(i=1; i<=n; i++)
+    {
+        sum=sum+i;
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+
+
+
+
+Q.Calculate the factorial of a number n.
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int i,n,factorial=1;
+    printf("Input n:\n");
+    scanf("%d",&n);
+    for(i=1; i<=n; i++)
+    {
+        factorial *=i;
+    }
+    printf("%d",factorial);
+    return 0;
+}
+
+
+
+
+
+
+
+
+Q.Print the first n terms of the Fibonacci series.
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a=0,b=1,c,n;
+    printf("Enter N:\n");
+    scanf("%d",&n);
+
+    for( int i=1; i<=n; i++ )
+    {
+        printf("%d ",a);
+    
+        c = a + b;
+        a = b;
+        b = c;
+
+
+
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q.Check Whether a Number is Palindrome or Not
+
+#include <stdio.h>
+
+int main()
+{
+    int n,reverse=0, remainder,temp;
+    printf("Enter a Number: \n");
+    scanf("%d",&n);
+    temp = n;
+    while (n!=0)
+    {
+        remainder = n%10;
+        reverse = reverse*10 + remainder;
+        n/=10;
+    }
+
+    if(temp == reverse)
+    {
+        printf("Palindrome");
+    }
+    else
+    {
+        printf(" Not Palindrome");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
 
