@@ -893,6 +893,235 @@ int main()
 
 
 
+Q.C program to find length of a string
+
+
+#include<stdio.h>
+int main()
+{
+    char ch[]={'A','U','S','T','/0'};
+    int a = strlen(ch);         //strlen is used to count string length
+    char ch1[]={'A','U','S','T'};
+    int b = strlen(ch1);
+
+    printf(" %d  %d", a ,b);
+
+
+    return 0 ;
+}
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    char text[100];
+    int i;
+    int count= 0;
+
+    printf("Enter any string: ");
+    gets(text);
+
+    for(i=0; text[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    printf("Length of '%s' = %d", text, count);
+
+    return 0;
+}
+
+
+
+Q.Write a C program to copy one string to another string.
+
+
+#include<stdio.h>
+int main()
+{
+    // string copy----strcpy(target,source)
+
+
+
+    char ch1[]="AUST";
+    char ch2[]= "CSE";
+
+    printf("%s\n",ch1);
+    printf("%s\n\n",ch2);
+    strcpy(ch1,ch2);
+    printf("%s\n",ch1);
+    printf("%s\n",ch2);
+
+    return 0;
+
+}
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    char text1[100];
+    char text2[100];
+    int i;
+  
+    printf("Enter any string: ");
+    gets(text1);
+    
+    for(i=0; text1[i]!='\0'; i++)
+    {
+        text2[i] = text1[i];
+    }
+
+    text2[i] = '\0';
+
+    printf("First string = %s\n", text1);
+    printf("Second string = %s\n", text2);
+    printf("Total characters copied = %d\n", i);
+
+    return 0;
+}
+
+
+
+Q.Write a C program to concatenate two strings.
+#include<stdio.h>
+int main()
+{
+    // string merge----strcat(target,source)
+
+
+
+    char ch1[]="AUST ";
+    char ch2[]= "CSE";
+
+    printf("%s\n",ch1);
+    printf("%s\n\n",ch2);
+    strcat(ch1,ch2);
+    printf("%s\n",ch1);
+    printf("%s\n",ch2);
+
+    return 0;
+
+
+
+Q.Write a C program to compare two strings.
+
+#include<stdio.h>
+int main()
+{
+    // string compair----strcmp(target,source)----  -1,0,1
+    //if 2nd is big then -1
+    // Lexicongraphically
+
+
+    char ch1[]="AUST";
+    char ch2[]= "CSE";
+
+    int value = strcmp(ch1,ch2);
+    printf("%d \n",value);
+
+
+
+
+    char ch3[]="AUST";
+    char ch4[]= "ACST";
+
+    int value1 = strcmp(ch3,ch4);
+    printf("%d",value1);
+
+
+    return 0;
+
+}
+
+
+Q.Write a C program to convert lowercase string to uppercase.
+
+#include<stdio.h>
+int main()
+{
+    // string strupr makes all upper letter strlwr makes all lower letter
+
+
+    char ch1[]="AusT";
+    char ch2[]= "cSe";
+
+    strupr(ch1);
+    printf("%s \n",ch1);
+
+
+
+ 
+
+
+
+
+    return 0;
+
+}
+
+
+
+
+Q.Write a C program to convert uppercase string to lowercase.
+#include<stdio.h>
+int main()
+{
+    // string strupr makes all upper letter strlwr makes all lower letter
+
+
+    char ch1[]="AusT";
+    char ch2[]= "cSe";
+
+
+
+
+    strlwr(ch2);
+    printf("%s \n",ch2);
+
+
+
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+Q.Write a C program to reverse string .
+
+#include<stdio.h>
+int main()
+{
+    // string strrev makes reverse
+
+
+    char ch1[]="AUST";
+    strrev(ch1);
+
+
+    printf("%s \n",ch1);
+
+
+    return 0;
+
+}
+
+
+
+
+
+
+
 
 
 
