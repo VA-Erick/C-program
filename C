@@ -1162,6 +1162,145 @@ int main()
 
 
 
+Q.Merge string.
+#include<stdio.h>
+
+
+
+int main()
+{
+    char str1[100];
+    printf("Enter string :\n");
+    gets(str1);
+    printf("%s",str1);
+
+    char str2[100];
+    printf("\nEnter string :\n");
+    gets(str2);
+    printf("%s\n",str2);
+
+    strcat(str1,str2);
+
+    printf("%s\n",str1);
+    printf("%s",str2);
+
+
+    return 0;
+
+
+}
+
+
+Q.Copy String
+#include<stdio.h>
+
+
+
+int main()
+{
+    char str1[100];
+    printf("Enter string :\n");
+    gets(str1);
+    printf("%s",str1);
+
+    char str2[100];
+    printf("\nEnter string :\n");
+    gets(str2);
+    printf("%s\n",str2);
+
+    strcpy(str1,str2);
+
+    printf("%s\n",str1);
+    printf("%s",str2);
+
+
+    return 0;
+
+
+}
+
+
+Q.Compair string.
+
+
+#include<stdio.h>
+int main()
+{
+    char str1[100];
+    printf("Enter string :\n");
+    gets(str1);
+    printf("%s",str1);
+
+    char str2[100];
+    printf("\nEnter string :\n");
+    gets(str2);
+    printf("%s\n",str2);
+
+    int b = strcmp(str1,str2);
+
+    printf("Compare = %d\n",b);
+
+
+    return 0;
+
+
+}
+
+
+Q.String UPPER and LOWER
+
+#include<stdio.h>
+int main()
+{
+    char str1[100];
+    printf("Enter string :\n");
+    gets(str1);
+
+
+    char str2[100];
+    printf("\nEnter string :\n");
+    gets(str2);
+
+
+    strupr(str1);
+    strlwr(str2);
+
+    printf("\n%s\n",str1);
+    printf("%s",str2);
+
+
+    return 0;
+
+
+}
+
+
+Q.String Reverse
+
+#include<stdio.h>
+int main()
+{
+    char str1[100];
+    printf("Enter string :\n");
+    gets(str1);
+
+
+    char str2[100];
+    printf("\nEnter string :\n");
+    gets(str2);
+
+
+    strrev(str1);
+    strrev(str2);
+
+    printf("\n%s\n",str1);
+    printf("%s",str2);
+
+
+    return 0;
+
+
+}
 
 
 
