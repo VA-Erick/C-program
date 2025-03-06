@@ -1444,3 +1444,82 @@ int main()
 
 
 
+
+
+
+
+
+
+
+Q.Print first 50 natural numbers (recursive funcsion)
+
+
+#include<stdio.h>
+int numPrint(int n)
+{
+    if(n<=50)
+    {
+         printf(" %d ",n);
+         numPrint(n+1);
+    }
+}
+
+int main()
+{
+    int n = 1;
+	printf("\n\n Recursion : print first 50 natural numbers :\n");
+	printf("-------------------------------------------------\n"); 
+	printf(" The natural numbers are :");
+    numPrint(n);
+    printf("\n\n");
+    return 0;
+}
+
+
+
+
+Q.Write a program in C to calculate the sum of numbers from 1 to n using recursion
+
+
+#include<stdio.h>
+
+int summer(int n)
+{
+    int sum=0;
+    if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        sum=n+summer(n-1);
+        return(sum);
+        
+    }
+}
+int main()
+{
+    int n,m;
+    printf("Enter a number:");
+    scanf("%d",&n);
+     m=summer(n);
+     
+     printf("The sum is:%d",m);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
