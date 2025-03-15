@@ -1539,6 +1539,9 @@ int main() {
 }
 
 
+
+
+
 Q.  Write a program to find out first n perfect number where n is the input from user.
 
 
@@ -1571,6 +1574,7 @@ int main()
 
     return 0;
 }
+
 
 
 
