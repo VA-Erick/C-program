@@ -1578,6 +1578,48 @@ int main()
 
 
 
+Q.Write a program to print out all Armstrong numbers between 1 and 10000. If sum of
+ cubes of each digit of the number is equal to the number itself, then the number is
+ called an Armstrong number. For example, 153 = (1*1*1) + (5*5*5) + (3*3*3).
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int a,b,temp,s,e;
+    printf("Enter a starting value:");
+    scanf("%d",&s);
+    printf("Enter a ending value:");
+    scanf("%d",&e);
+    printf("The Armstrong numbers are:");
+
+    for(int i=s; i<=e; i++)
+    {
+        temp=i;
+        int sum=0;
+
+        for(int j=1; temp!=0; j++)
+        {
+            a=temp%10;
+            sum=sum+(a*a*a);
+            temp=temp/10;
+        }
+
+        if(sum==i)
+        {
+            printf(" %d ",i);
+        }
+    }
+
+
+    return 0;
+}
+
+
+
 
 
 
