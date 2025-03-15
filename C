@@ -1539,6 +1539,43 @@ int main() {
 }
 
 
+Q.  Write a program to find out first n perfect number where n is the input from user.
+
+
+
+#include <stdio.h>
+int main()
+{
+    int s,e;
+    printf("Enter the starting value:");
+    scanf("%d",&s);
+    printf("Enter the ending value:");
+    scanf("%d",&e);
+    printf("The perfect number are:");
+    for(int i=1; i<=e; i++)
+    {
+        int sum=0;
+        for(int j=1; j<i; j++)
+        {
+            if(i%j==0)
+            {
+                sum=sum+j;
+            }
+        }
+
+        if(sum==i)
+        {
+            printf(" %d",i);
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
 
 
 
