@@ -1809,20 +1809,6 @@ int main()
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     for(int i=0; i<n-1; i++)
     {
         printf("\nThe %d array element:%d",i,arr[i]);
@@ -1905,5 +1891,99 @@ int main()
 }
 
 
+
+
+
+
+Q.Matrix multiplication.
+#include <stdio.h>
+int main()
+{
+    int arr[100][100],brr[100][100],crr[100][100];
+    int r1,r2,r3,c1,c2,c3,sum;
+    printf("Enter the row number of array 1:");
+    scanf("%d",&r1);
+    printf("Enter the column number of array 1:");
+    scanf("%d",&c1);
+    printf("Enter the row number of array 2:");
+    scanf("%d",&r2);
+    printf("Enter the column number of array 2:");
+    scanf("%d",&c2);
+
+
+    for(int i=0; i<r1; i++)
+    {
+        for(int j=0; j<c1; j++)
+        {
+            printf("Enter the element arr[%d][%d] :",i,j);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+
+    for(int i=0; i<r2; i++)
+    {
+        for(int j=0; j<c2; j++)
+        {
+            printf("Enter the element brr[%d][%d] :",i,j);
+            scanf("%d",&brr[i][j]);
+        }
+    }
+
+
+    for(int i=0; i<r1; i++)
+    {
+        for(int j=0; j<c1; j++)
+        {
+            printf("\nEnter the element arr[%d][%d] :%d",i,j,arr[i][j]);
+
+        }
+    }
+
+    for(int i=0; i<r2; i++)
+    {
+        for(int j=0; j<c2; j++)
+        {
+            printf("\nEnter the element brr[%d][%d] :%d",i,j,brr[i][j]);
+
+        }
+    }
+
+
+    for(int i=0; i<r1; i++)
+    {
+        for(int j=0; j<c2; j++)
+        {
+            sum =0;
+            {
+                for(int k=0; k<c1; k++)
+                {
+                    sum=sum+(arr[i][k]*brr[k][j]);
+                }
+            }
+            crr[i][j]=sum;
+        }
+    }
+
+
+
+
+    for(int i=0; i<r1; i++)
+    {
+        printf("\n");
+        for(int j=0; j<c2; j++)
+        {
+            printf("\n\t The element crr[%d][%d] :%d",i,j,crr[i][j]);
+
+        }
+    }
+
+
+
+
+
+
+
+    return 0;
+}
 
 
