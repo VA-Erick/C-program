@@ -1626,3 +1626,284 @@ int main()
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Array
+
+
+
+
+
+Q.Write a program in C to store elements in an array and print them
+#include <stdio.h>
+int main()
+{
+    int n;
+
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        printf("Enter %d array element:",i);
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0; i<n; i++)
+    {
+        printf("\nThe %d array element:%d",i,arr[i]);
+    }
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+Q.Write a program in C to sorted in assending order.
+#include <stdio.h>
+int main()
+{
+    int n,temp;
+
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        printf("Enter %d array element:",i);
+        scanf("%d",&arr[i]);
+    }
+
+    for(int i=1; i<n; i++)
+    {
+        for(int j=0; j<n-i; j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    for(int i=0; i<n; i++)
+    {
+        printf("\nThe %d array element:%d",i,arr[i]);
+    }
+
+
+
+    return 0;
+}
+
+
+Q.Inserting a number/character into the proper position of an array which is sorted in
+ ascending/descending order.
+
+
+#include <stdio.h>
+int main()
+{
+    int n,temp;
+
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+
+    for(int i=0; i<n-1; i++)
+    {
+        printf("Enter %d array element:",i);
+        scanf("%d",&arr[i]);
+    }
+
+    for(int i=1; i<n-1; i++)
+    {
+        for(int j=0; j<n-1-i; j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    for(int i=0; i<n-1; i++)
+    {
+        printf("\nThe %d array element:%d",i,arr[i]);
+    }
+
+
+
+
+
+
+
+
+
+
+    printf("\n \n Enter %d array element:",n-1);
+    scanf("%d",&arr[n-1]);
+
+
+    for(int i=1; i<n; i++)
+    {
+        for(int j=0; j<n-i; j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+
+
+
+
+
+
+    for(int i=0; i<n; i++)
+    {
+        printf("\nThe %d array element:%d",i,arr[i]);
+    }
+
+
+
+    return 0;
+}
+
+
+Q. Deleting an element from an array.
+#include <stdio.h>
+int main()
+{
+    int n,temp;
+
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        printf("Enter %d array element:",i);
+        scanf("%d",&arr[i]);
+    }
+
+    printf("\n \nEnter The position to delete:");
+    scanf("%d",&temp);
+
+
+
+
+    for(int i=temp-1; i<n; i++)
+    {
+        arr[i]=arr[i+1];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    for(int i=0; i<n-1; i++)
+    {
+        printf("\nThe %d array element:%d",i,arr[i]);
+    }
+
+
+
+    return 0;
+}
+
+
+
+Q.Write a program to find out the maximum of an array of numbers.
+#include <stdio.h>
+int main()
+{
+    int n,temp;
+
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        printf("Enter %d array element:",i);
+        scanf("%d",&arr[i]);
+    }
+
+    temp=arr[0];
+
+    for(int i; i<n; i++)
+    {
+        if(temp<arr[i])
+        {
+            temp=arr[i];
+        }
+    }
+
+
+
+    printf("\nThe maximum number is:%d",temp);
+
+
+    return 0;
+}
+
+
+Q.Write a program to find out the minimum of an array of numbers.
+#include <stdio.h>
+int main()
+{
+    int n,temp;
+
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        printf("Enter %d array element:",i);
+        scanf("%d",&arr[i]);
+    }
+
+    temp=arr[0];
+
+    for(int i; i<n; i++)
+    {
+        if(temp>arr[i])
+        {
+            temp=arr[i];
+        }
+    }
+
+
+
+    printf("\nThe minimum number is:%d",temp);
+
+
+    return 0;
+}
+
+
+
+
